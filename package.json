@@ -1,11 +1,10 @@
 {
-  "name": "@sidebase/nuxt-auth",
+  "name": "@spokt1/nuxt-auth",
   "version": "0.9.3",
   "license": "MIT",
   "type": "module",
   "description": "Authentication built for Nuxt 3! Easily add authentication via OAuth providers, credentials or Email Magic URLs!",
-  "homepage": "https://auth.sidebase.io",
-  "repository": "github:sidebase/nuxt-auth",
+  "homepage": "https://github.com/Spokt1/nuxt-auth#main",
   "engines": {
     "pnpm": ">=9.4.0",
     "node": ">=20"
@@ -46,7 +45,7 @@
     "ufo": "^1.5.4"
   },
   "peerDependencies": {
-    "next-auth": "~4.21.1"
+    "next-auth": "4.21.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.25.0",
@@ -63,5 +62,16 @@
     "vitepress": "^1.3.1",
     "vue-tsc": "^2.0.29"
   },
-  "packageManager": "pnpm@9.6.0+sha512.38dc6fba8dba35b39340b9700112c2fe1e12f10b17134715a4aa98ccf7bb035e76fd981cf0bb384dfa98f8d6af5481c2bef2f4266a24bfa20c34eb7147ce0b5e"
+  "packageManager": "pnpm@9.6.0+sha512.38dc6fba8dba35b39340b9700112c2fe1e12f10b17134715a4aa98ccf7bb035e76fd981cf0bb384dfa98f8d6af5481c2bef2f4266a24bfa20c34eb7147ce0b5e",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spokt1/nuxt-auth.git#main"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/Spokt1/nuxt-auth/issues"
+  }
 }

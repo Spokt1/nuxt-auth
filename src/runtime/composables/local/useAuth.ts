@@ -135,17 +135,18 @@ async function getSession(getSessionOptions?: GetSessionOptions): Promise<Sessio
 
   const config = useTypedBackendConfig(useRuntimeConfig(), 'local')
   const { path, method } = config.endpoints.getSession
-  const { data, loading, lastRefreshedAt, rawToken, refreshToken, token: tokenState, _internal } = useAuthState()
+  const { data, loading, lastRefreshedAt, rawToken, refreshToken: refreshTokenState, token: tokenState, _internal } = useAuthState()
 
   let token = tokenState.value
+  const refreshToken = refreshTokenState.value
   // For cached responses, return the token directly from the cookie
   token ??= formatToken(_internal.rawTokenCookie.value, config)
 
   if (!token && !getSessionOptions?.force && !refreshToken) {
     loading.value = false
     return
-  } else if(!token && refreshToken){
-      return await refresh(getSessionOptions)
+  } else if (!token && refreshToken) {
+    return await refresh(getSessionOptions)
   }
 
   const headers = new Headers(token ? { [config.token.headerName]: token } as HeadersInit : undefined)
